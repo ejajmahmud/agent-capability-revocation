@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-capability-revocation"
+version = "0.1.0"
+description = "Expiring capability token manager allowing agents to delegate least-privilege tool execution permissions with TTL and call limits"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-capability-revocation = "agent_capability_revocation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_capability_revocation*"]
